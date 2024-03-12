@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Plants Organizer</string>
+
+    <string name="tab_home">Plants</string>
+    <string name="tab_favourites">Favourites</string>
+    <string name="top_bar_title">Home Garden</string>
+
+    <string name="empty_list_text">Oh no, it seems like you don\'t have any plants yet…</string>
+
+    <string name="plant_content_description">Plant image</string>
+    <string name="favourites_content_description">Heart icon</string>
 </resources>

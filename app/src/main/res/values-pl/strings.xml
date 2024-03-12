@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Plants Organizer</string>
+
+    <string name="tab_home">Rośliny</string>
+    <string name="tab_favourites">Ulubione</string>
+    <string name="top_bar_title">Domowy Ogród</string>
+
+    <string name="plant_content_description">Ikona kwiatka</string>
+    <string name="favourites_content_description">Ikona serca</string>
+    <string name="empty_list_text">O nie, wygląda na to, że nie masz jeszcze żadnych roślin…</string>
+</resources>
