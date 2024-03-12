@@ -2,4 +2,10 @@
 <resources>
 
     <style name="Theme.PlantsOrganizer" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.PlantsOrganizer.Starting" parent="Theme.SplashScreen.IconBackground">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+        <item name="postSplashScreenTheme">@style/Theme.PlantsOrganizer</item>
+    </style>
 </resources>
