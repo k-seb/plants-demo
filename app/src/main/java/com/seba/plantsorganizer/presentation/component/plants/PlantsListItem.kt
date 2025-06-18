@@ -69,8 +69,8 @@ fun PlantsListItem(modifier: Modifier = Modifier, plant: PlantUiModel = PlantUiM
                     .padding(8.dp)
                     .clip(CircleShape),
                 contentDescription = "",
-                loading = placeholder(R.drawable.monstera),
-                failure = placeholder(R.drawable.monstera)
+                loading = placeholder(R.drawable.plant_placeholder),
+                failure = placeholder(R.drawable.plant_placeholder)
             ) {
                 it.load(plant.photoPath)
             }
