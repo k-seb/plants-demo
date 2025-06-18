@@ -7,7 +7,7 @@
     <string name="add_plant_top_bar_title">Add plant</string>
 
     <string name="empty_plants_list_text">Oh no, it seems like you don\'t have any plants yet…</string>
-    <string name="empty_favourites_list_text">You don\'t like your plants? Go and add heart on some!</string>
+    <string name="empty_favourites_list_text">Don\'t you like your plants? Go and add heart on some!</string>
 
     <string name="plant_content_description">Plant image</string>
     <string name="favourites_content_description">Heart icon</string>

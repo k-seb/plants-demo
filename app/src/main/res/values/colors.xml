@@ -13,4 +13,5 @@
     <color name="app_main_color">#A8D375</color>
     <color name="tab_selected_color">#d375a9</color>
     <color name="red">#FF6961</color>
+    <color name="ic_launcher_background">#A8D375</color>
 </resources>
