@@ -13,5 +13,9 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Plants Organizer"
+rootProject.name = "PlantsOrganizer"
 include(":app")
+include(":core")
+include(":data")
+include(":domain")
+include(":feature:plants")
