@@ -5,4 +5,5 @@ plugins {
     id("com.google.devtools.ksp") version "2.1.21-2.0.2" apply false
     id("com.google.dagger.hilt.android") version "2.56.2" apply false
     id("org.jetbrains.kotlin.plugin.compose") version "2.1.21"
+    id("com.android.library") version "8.6.1" apply false
 }

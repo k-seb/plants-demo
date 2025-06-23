@@ -1,8 +1,9 @@
 package com.seba.plantsorganizer.presentation.viewmodel
 
-import com.seba.plantsorganizer.core.mapper.PlantMapper
+import com.seba.plantsorganizer.data.mapper.PlantMapper
 import com.seba.plantsorganizer.domain.model.Plant
 import com.seba.plantsorganizer.domain.usecase.GetPlantsUseCase
+import com.seba.plantsorganizer.plants.viewmodel.MainViewModel
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers
