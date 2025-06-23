@@ -20,6 +20,7 @@ class MainViewModel @Inject constructor(
 ) : ViewModel() {
     private val samplePlants = List(7) { index ->
         PlantUiModel(
+            id = index.toLong(),
             name = C.POPULAR_HOUSE_PLANTS.random(),
             description = C.PLANT_DESCRIPTION_PLACEHOLDER,
             isFavourite = index % 3 == 0

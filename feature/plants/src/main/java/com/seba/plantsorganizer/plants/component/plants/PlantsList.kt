@@ -19,7 +19,12 @@ import com.seba.plantsorganizer.plants.R
 import com.seba.plantsorganizer.plants.model.PlantUiModel
 
 @Composable
-fun PlantsList(plantsList: List<PlantUiModel>, listState: LazyListState, modifier: Modifier) {
+fun PlantsList(
+    plantsList: List<PlantUiModel>,
+    listState: LazyListState,
+    modifier: Modifier,
+    onPlantClick: (Long) -> Unit
+) {
     Column(
         modifier = modifier
             .padding(
@@ -33,7 +38,7 @@ fun PlantsList(plantsList: List<PlantUiModel>, listState: LazyListState, modifie
             verticalArrangement = Arrangement.spacedBy(8.dp),
             modifier = Modifier
                 .fillMaxSize()
-                .padding(vertical = 8.dp)
+                .padding(vertical = 8.dp),
         ) {
             item {
                 Text(
@@ -44,7 +49,7 @@ fun PlantsList(plantsList: List<PlantUiModel>, listState: LazyListState, modifie
                 )
             }
             items(plantsList) {
-                PlantsListItem(Modifier, it)
+                PlantsListItem(Modifier, it, onPlantClick)
             }
         }
     }
