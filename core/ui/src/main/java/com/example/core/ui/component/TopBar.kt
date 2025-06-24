@@ -1,16 +1,11 @@
-package com.seba.plantsorganizer.plants.component.plants
+package com.seba.plantsorganizer.plants.component
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.wrapContentHeight
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -22,36 +17,24 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavHostController
-import androidx.navigation.compose.rememberNavController
-import com.seba.plantsorganizer.plants.R
+import com.seba.plantsorganizer.core.ui.R
 
 @Preview(showBackground = true)
 @Composable
-fun AddPlantTopBar(navController: NavHostController = rememberNavController()) {
+fun TopBar() {
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .statusBarsPadding()
             .height(dimensionResource(id = R.dimen.app_bar_height))
             .background(color = colorResource(id = R.color.app_main_color))
-            .wrapContentHeight(align = Alignment.CenterVertically),
-        horizontalArrangement = Arrangement.Start, verticalAlignment = Alignment.CenterVertically
-
+            .wrapContentHeight(align = Alignment.CenterVertically)
     ) {
-        IconButton(onClick = { navController.popBackStack() }) {
-            Icon(
-                Icons.AutoMirrored.Filled.ArrowBack,
-                contentDescription = null,
-                tint = colorResource(
-                    id = R.color.white
-                )
-            )
-        }
         Text(
-            text = stringResource(id = R.string.add_plant_top_bar_title),
+            text = stringResource(id = R.string.top_bar_title),
             textAlign = TextAlign.Center,
             color = colorResource(id = R.color.white),
+            modifier = Modifier.fillMaxWidth(),
             fontStyle = FontStyle.Normal,
             fontSize = 21.sp
         )

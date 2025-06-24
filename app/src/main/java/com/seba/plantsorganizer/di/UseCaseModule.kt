@@ -1,6 +1,7 @@
 package com.seba.plantsorganizer.di
 
 import com.seba.plantsorganizer.domain.repository.PlantsRepository
+import com.seba.plantsorganizer.domain.usecase.GetPlantByIdUseCase
 import com.seba.plantsorganizer.domain.usecase.GetPlantsUseCase
 import dagger.Module
 import dagger.Provides
@@ -17,5 +18,13 @@ object UseCaseModule {
         repository: PlantsRepository
     ): GetPlantsUseCase {
         return GetPlantsUseCase(repository)
+    }
+
+    @Provides
+    @Singleton
+    fun provideGetPlantByIdUseCase(
+        repository: PlantsRepository
+    ): GetPlantByIdUseCase {
+        return GetPlantByIdUseCase(repository)
     }
 }

@@ -17,7 +17,8 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.seba.plantsorganizer.plants.R
+import com.example.core.ui.component.Screen
+import com.seba.plantsorganizer.core.ui.R
 
 @Preview(showBackground = true)
 @Composable

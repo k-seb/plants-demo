@@ -2,7 +2,6 @@ plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
     id("org.jetbrains.kotlin.plugin.compose")
 }
 
@@ -21,6 +20,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+
     kotlinOptions {
         jvmTarget = "17"
     }
@@ -40,15 +40,16 @@ composeCompiler {
 }
 
 dependencies {
+    implementation(project(":core:ui"))
     implementation(project(":core"))
     implementation(project(":domain"))
 
     // Compose UI
-    implementation("androidx.compose.ui:ui:1.8.2")
-    implementation("androidx.compose.material:material:1.8.2")
+    implementation("androidx.compose.ui:ui:1.8.3")
+    implementation("androidx.compose.material:material:1.8.3")
     implementation("androidx.compose.material3:material3:1.3.2")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.8.2")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.8.2")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.8.3")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.8.3")
 
     // Compose Navigation
     implementation("androidx.navigation:navigation-compose:2.9.0")
@@ -67,4 +68,8 @@ dependencies {
     // Ikony
     implementation("androidx.compose.material:material-icons-core:1.7.8")
     implementation("androidx.compose.material:material-icons-extended:1.7.8")
+
+    //Test
+    testImplementation("junit:junit:4.13.2")
+    androidTestImplementation("androidx.test.ext:junit:1.2.1")
 }

@@ -56,7 +56,7 @@ class MainViewModelTest {
 
         advanceUntilIdle() // <- ważne!
 
-        val actual = viewModel.plantsUiState.drop(1).first() // <- pomiń initialValue
+        val actual = viewModel.realPlants.drop(1).first() // <- pomiń initialValue
         assertEquals(expectedUi, actual)
     }
 }

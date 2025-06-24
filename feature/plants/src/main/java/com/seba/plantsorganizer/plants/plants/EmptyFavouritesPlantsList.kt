@@ -1,4 +1,4 @@
-package com.seba.plantsorganizer.plants.component.plants
+package com.seba.plantsorganizer.plants.plants
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -19,6 +19,7 @@ import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.bumptech.glide.integration.compose.placeholder
 import com.seba.plantsorganizer.plants.R
+import com.seba.plantsorganizer.core.ui.R as UiR
 
 @OptIn(ExperimentalGlideComposeApi::class)
 @Preview(showBackground = true)
@@ -37,10 +38,10 @@ fun EmptyFavouritesPlantsList(modifier: Modifier = Modifier) {
                 .padding(8.dp)
                 .size(280.dp, 280.dp),
             contentDescription = "",
-            loading = placeholder(R.drawable.empty_favourites_placeholder),
-            failure = placeholder(R.drawable.empty_favourites_placeholder)
+            loading = placeholder(UiR.drawable.empty_favourites_placeholder),
+            failure = placeholder(UiR.drawable.empty_favourites_placeholder)
         ) {
-            it.load(R.drawable.empty_favourites_placeholder)
+            it.load(UiR.drawable.empty_favourites_placeholder)
         }
         Spacer(modifier = modifier.size(16.dp))
         Text(

@@ -1,9 +1,9 @@
-package com.seba.plantsorganizer.plants.component
+package com.example.core.ui.component
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
-import com.seba.plantsorganizer.plants.R
 import com.seba.plantsorganizer.core.constants.C
+import com.seba.plantsorganizer.core.ui.R
 
 sealed class Screen(
     val route: String,
