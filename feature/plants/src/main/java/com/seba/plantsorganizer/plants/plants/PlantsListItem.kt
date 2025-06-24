@@ -1,4 +1,4 @@
-package com.seba.plantsorganizer.plants.component.plants
+package com.seba.plantsorganizer.plants.plants
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -26,19 +26,21 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.bumptech.glide.integration.compose.ExperimentalGlideComposeApi
 import com.bumptech.glide.integration.compose.GlideImage
 import com.bumptech.glide.integration.compose.placeholder
-import com.seba.plantsorganizer.plants.R
+import com.seba.plantsorganizer.core.ui.R
 import com.seba.plantsorganizer.plants.model.PlantUiModel
 
 @OptIn(ExperimentalGlideComposeApi::class)
-@Preview(showBackground = true)
 @Composable
-fun PlantsListItem(modifier: Modifier = Modifier, plant: PlantUiModel = PlantUiModel()) {
+fun PlantsListItem(
+    modifier: Modifier = Modifier,
+    plant: PlantUiModel = PlantUiModel(),
+    onPlantClick: (Long) -> Unit
+) {
     Card(
         colors = CardColors(
             colorResource(R.color.white),
@@ -55,6 +57,7 @@ fun PlantsListItem(modifier: Modifier = Modifier, plant: PlantUiModel = PlantUiM
                 colorResource(id = R.color.light_gray),
                 RoundedCornerShape(corner = CornerSize(10.dp))
             ),
+        onClick = { onPlantClick(plant.id) }
     ) {
         Row(
             modifier = modifier

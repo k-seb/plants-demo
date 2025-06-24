@@ -3,7 +3,7 @@ package com.seba.plantsorganizer.core.mapper
 import com.seba.plantsorganizer.data.mapper.PlantMapper
 import com.seba.plantsorganizer.data.model.PlantEntity
 import com.seba.plantsorganizer.domain.model.Plant
-import com.seba.plantsorganizer.plants.model.PlantUiModel
+import com.seba.plantsorganizer.plantdetails.model.PlantDetailUiModel
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
@@ -25,7 +25,7 @@ class PlantMapperTest {
     @Test
     fun domainToUiModel() {
         val domainPlants = Plant(name = "Monstera", isFavourite = true, description = "Piękna monstera")
-        val expectedUi = PlantUiModel(name = "Monstera", isFavourite = true, description = "Piękna monstera")
+        val expectedUi = PlantDetailUiModel(name = "Monstera", isFavourite = true, description = "Piękna monstera")
         assertEquals(expectedUi, PlantMapper.domainToUiModel(domainPlants))
     }
 }

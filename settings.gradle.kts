@@ -16,6 +16,8 @@ dependencyResolutionManagement {
 rootProject.name = "PlantsOrganizer"
 include(":app")
 include(":core")
+include(":core:ui")
 include(":data")
 include(":domain")
 include(":feature:plants")
+include(":feature:plantdetails")

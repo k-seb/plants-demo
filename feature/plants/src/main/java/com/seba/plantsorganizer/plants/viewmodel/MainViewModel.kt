@@ -29,7 +29,7 @@ class MainViewModel @Inject constructor(
 
     val fakePlants: StateFlow<List<PlantUiModel>> = _fakePlants
 
-    val plantsUiState: StateFlow<List<PlantUiModel>> =
+    val realPlants: StateFlow<List<PlantUiModel>> =
         getPlantsUseCase()
             .map { list -> list.map { PlantUiModelMapper.domainToUiModel(it) } }
             .stateIn(

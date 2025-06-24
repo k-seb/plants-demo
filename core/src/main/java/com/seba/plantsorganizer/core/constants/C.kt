@@ -3,6 +3,7 @@ package com.seba.plantsorganizer.core.constants
 object C {
     const val HOME_ROUTE = "home"
     const val FAV_ROUTE = "favouriteslist"
+    const val DETAILS_ROUTE = "details"
     const val ADD_PLANT_ROUTE = "addplant"
 
     const val DATABASE_NAME = "Plants"

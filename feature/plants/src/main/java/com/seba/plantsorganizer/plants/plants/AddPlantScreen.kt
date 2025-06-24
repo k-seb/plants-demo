@@ -12,7 +12,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.seba.plantsorganizer.plants.R
+import com.seba.plantsorganizer.core.ui.R
 import com.seba.plantsorganizer.plants.viewmodel.MainViewModel
 
 @Preview(showBackground = true)

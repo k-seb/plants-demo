@@ -8,5 +8,7 @@ interface PlantsRepository {
 
     fun getPlants(): Flow<List<Plant>>
 
+    fun getPlantById(id: Long): Flow<Plant?>
+
     fun removePlant(plant: Plant) = Unit
 }
