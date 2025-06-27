@@ -1,8 +1,8 @@
 package com.seba.plantsorganizer.domain.usecase
 
 import app.cash.turbine.test
+import com.seba.plantsorganizer.core.testing.FakePlantsRepository
 import com.seba.plantsorganizer.domain.model.Plant
-import com.seba.plantsorganizer.domain.repository.FakePlantsRepository
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.*
 

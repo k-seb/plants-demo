@@ -1,8 +1,8 @@
-package com.seba.plantsorganizer.presentation.viewmodel
+package com.seba.plantsorganizer.plants.presentation
 
-import com.seba.plantsorganizer.data.mapper.PlantMapper
 import com.seba.plantsorganizer.domain.model.Plant
 import com.seba.plantsorganizer.domain.usecase.GetPlantsUseCase
+import com.seba.plantsorganizer.plants.model.PlantUiModelMapper
 import com.seba.plantsorganizer.plants.viewmodel.MainViewModel
 import io.mockk.every
 import io.mockk.mockk
@@ -24,12 +24,9 @@ import org.junit.Test
 @OptIn(ExperimentalCoroutinesApi::class)
 class MainViewModelTest {
 
-    // Dispatcher testowy
     private val testDispatcher = StandardTestDispatcher()
 
-    // Use case (będzie mockowany)
     private lateinit var getPlantsUseCase: GetPlantsUseCase
-
 
     @Before
     fun setup() {
@@ -48,15 +45,15 @@ class MainViewModelTest {
             Plant(name = "Monstera", isFavourite = true),
             Plant(name = "Aloes", isFavourite = false)
         )
-        val expectedUi = domainPlants.map { PlantMapper.domainToUiModel(it) }
+        val expectedUi = domainPlants.map { PlantUiModelMapper.domainToUiModel(it) }
 
         every { getPlantsUseCase() } returns flowOf(domainPlants)
 
         val viewModel = MainViewModel(getPlantsUseCase)
 
-        advanceUntilIdle() // <- ważne!
+        advanceUntilIdle()
 
-        val actual = viewModel.realPlants.drop(1).first() // <- pomiń initialValue
+        val actual = viewModel.realPlants.drop(1).first()
         assertEquals(expectedUi, actual)
     }
 }
